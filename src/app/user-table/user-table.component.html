@@ -1,0 +1,21 @@
+<table>
+    <tr>
+      
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+    </tr>
+    <tr  *ngFor="let user of users let i = index">
+      
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td >{{ user.age }}</td>
+
+      <button 
+        (click)="removeUser(i)"
+        class ="btn btn-outline-danger btn-sm">Delete</button>
+    </tr>
+  </table>
+  <hr>
+  <app-create-user-form (userCreated)="addUser($event)"></app-create-user-form>
+  

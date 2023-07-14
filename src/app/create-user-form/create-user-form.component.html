@@ -1,0 +1,24 @@
+<form>
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" class="form-control" type="text" [(ngModel)]="userName" [ngModelOptions]="{ standalone: true }">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email"class="form-control" type="text" [(ngModel)]="userEmail" [ngModelOptions]="{ standalone: true }"
+      
+      >
+      
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input 
+        id="age"
+        class="form-control"
+        type="number"
+        [(ngModel)]="userAge" [ngModelOptions]="{ standalone: true }">
+    </div>
+    <button class=" btn btn-outline-primary w-100" type="submit" (click)="createUser();onClick()">Create User</button>
+
+  </form>
+  
